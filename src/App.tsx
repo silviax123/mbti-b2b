@@ -16,6 +16,9 @@ function App() {
           <p> this is the content inside the container</p>
         </AnimalWithContainer>
       </body>
+      <footer>
+        <p>©️ M16人格研究所.</p>
+      </footer>
     </div>
   );
 }
