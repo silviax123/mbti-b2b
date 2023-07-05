@@ -1,5 +1,5 @@
 import React from 'react';
-import './container.css'; // Add your custom styles here
+import './container.css';
 
 interface AnimalWithContainerProps {
   children: React.ReactNode;

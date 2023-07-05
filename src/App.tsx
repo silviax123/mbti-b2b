@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import ProgressBar from './components/ProgressBar';
 import AnimalWithContainer from './components/AnimalWithContainer';
+import AnswerRadioGroup from './components/AnswerRadioGroup';
+import Button from '@mui/joy/Button';
 
 function App() {
   return (
@@ -15,6 +17,10 @@ function App() {
         <AnimalWithContainer>
           <p> this is the content inside the container</p>
         </AnimalWithContainer>
+        <AnswerRadioGroup question={'question1'} options={[]} onNext={function (): void {
+          throw new Error('Function not implemented.');
+        } }></AnswerRadioGroup>
+
       </body>
       <footer>
         <p>©️ M16人格研究所.</p>

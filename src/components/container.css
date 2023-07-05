@@ -5,3 +5,9 @@
     background-image: url('../assets/qbox_04.png');
     background-size: cover; 
 }
+
+.answerRadioGroupContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 567px;
+}
