@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-body {
@@ -33,16 +33,8 @@
 
 .button-container {
   padding: 32px;
-  width: 172px;
+  width: 234px;
   display: flex;
-  align-content: space-between;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
