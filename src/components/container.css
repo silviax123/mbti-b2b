@@ -1,6 +1,6 @@
 .container {
 	width: 763px;
-	height: 300px;
+	min-height: 300px;
 	margin: 0px 0px 0px -12px;
     background-image: url('../assets/qbox_04.png');
     background-size: cover; 
@@ -14,7 +14,7 @@
 
 .answer-container {
 	background-color: #FFCD5C;
-	min-height:800px;
+	height: 8000px;
 	font-weight: 400;
 }
 
@@ -98,4 +98,11 @@
 	text-align: center;
 	margin: 40px 20px;
 	margin-left: 90px;
+}
+
+.label-container {
+	margin: 30px 30px;
+	clear: both;
+	text-align: left;
+	font-size: 28px;
 }

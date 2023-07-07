@@ -2,6 +2,8 @@ import './container.css';
 import photoINTP from '../assets/profile-photo/profile-INTP.png'
 import dialog_box from '../assets/res1.png'
 import BarChart from './BarChart';
+import PercentageAndFigureType from './PercentageAndType';
+import Label from './Label';
 
 
 
@@ -28,6 +30,8 @@ const IndexOfAnswer = () => {
       </div>
 
       <BarChart></BarChart>
+      <PercentageAndFigureType />
+      <Label/>
 
 
 
