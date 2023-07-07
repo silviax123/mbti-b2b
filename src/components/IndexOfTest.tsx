@@ -7,7 +7,7 @@ const IndexOfTest = () => {
   return (
     <>
       <header className="App-header">
-        <p>M16人格测试</p>
+        <p>M16 Personality Test</p>
       </header> 
       <body className='App-body'>
         <ProgressBar value={40}/>
@@ -18,12 +18,12 @@ const IndexOfTest = () => {
           throw new Error('Function not implemented.');
         } }></AnswerRadioGroup>
         <div className='button-container'>
-          <Button disabled={false} variant="solid" color='success'>提交试卷</Button>
-          <Button>上一题</Button>
+          <Button disabled={false} variant="solid" color='success'>Submit</Button>
+          <Button>Last Question</Button>
         </div>
       </body>
       <footer>
-        <p>©️ M16人格研究所.</p>
+        <p>©️ M16.</p>
       </footer>
     </>
   )

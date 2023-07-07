@@ -23,21 +23,21 @@ const AnswerRadioGroup: React.FC<AnswerRadioGroupProps> = () => {
         <FormControlLabel 
           value="-2" 
           control={<Radio size="lg"/>} 
-          label=" A. 符合" 
+          label=" A. strongly agree" 
         />
         <FormControlLabel 
           value="-1" 
           control={<Radio size="lg"/>} 
-          label=" B. 有点符合" 
+          label=" B. agree" 
           />
         <FormControlLabel 
           value="1" 
           control={<Radio size="lg"/>} 
-          label=" C. 不太符合" />
+          label=" C. disagree" />
         <FormControlLabel 
           value="1" 
           control={<Radio size="lg"/>} 
-          label=" D. 不符合" />
+          label=" D. strongly disagree" />
       </RadioGroup>
     </FormControl>
   );

@@ -11,3 +11,91 @@
 	justify-content: space-between;
 	width: 567px;
 }
+
+.answer-container {
+	background-color: #FFCD5C;
+	min-height:800px;
+	font-weight: 400;
+}
+
+.header-container {
+	padding: 32px;
+}
+
+.profile-photo {
+	text-align: center;
+	margin-top: 20px;
+	height: 250px;
+}
+
+.oneWord {
+	text-align: center;
+	position: relative;
+	width: 90%;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.oneWordtxt {
+	position: absolute;
+	top: 0;
+	margin-top: 60px;
+	margin-left: 100px;
+	font-size: 28px;
+}
+
+.g-container-a {
+	width: 350px;
+	height: 25px;
+	border-radius: 25px;
+	background: #fff;
+}
+.g-container-b {
+	width: 350px;
+	height: 25px;
+	border-radius: 25px;
+	background: #8fc94c;
+}
+.g-container-c {
+	width: 350px;
+	height: 25px;
+	border-radius: 25px;
+	background: #fff;
+}
+.g-container-d {
+	width: 350px;
+	height: 25px;
+	border-radius: 25px;
+	background: #fff;
+}
+
+.g-progress-a {
+	width: 50%;
+	height: inherit;
+	border-radius: 25px 0 0 25px;
+	background: #EB6841;
+}
+.g-progress-b {
+	width: 40%;
+	height: inherit;
+	border-radius: 25px 0 0 25px;
+	background: #fff;
+}
+.g-progress-c {
+	width: 58%;
+	height: inherit;
+	border-radius: 25px 0 0 25px;
+	background: #6496da;
+}
+.g-progress-d {
+	width: 70%;
+	height: inherit;
+	border-radius: 25px 0 0 25px;
+	background: #a98fcd;
+}
+
+.data{
+	text-align: center;
+	margin: 40px 20px;
+	margin-left: 90px;
+}
