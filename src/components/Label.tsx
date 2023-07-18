@@ -1,6 +1,6 @@
 const Label = () => {
   return (
-    <div class="dict">
+    <div className="label-container">
       <p>观察者</p>
       <p>计划</p>
       <p>思考</p>
@@ -11,3 +11,5 @@ const Label = () => {
     </div>
   )
 }
+
+export default Label

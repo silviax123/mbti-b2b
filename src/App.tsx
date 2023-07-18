@@ -5,8 +5,8 @@ import IndexOfTest from './components/IndexOfTest';
 function App() {
   return (
     <div className="App">
-      {/* <IndexOfTest /> */}
-      <IndexOfAnswer />
+      <IndexOfTest />
+      {/* <IndexOfAnswer /> */}
     </div>
 
   )

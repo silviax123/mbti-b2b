@@ -23,7 +23,7 @@ const IndexOfTest = () => {
         </div>
       </body>
       <footer>
-        <p>©️ M16.</p>
+        <p>©️ M16.人格研究所</p>
       </footer>
     </>
   )
