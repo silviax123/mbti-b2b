@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import AnswerRadioGroup from './AnswerRadioGroup';
 
 const Questionnaire: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -30,11 +29,12 @@ const Questionnaire: React.FC = () => {
   const renderQuestion = () => {
     const question = questions[currentQuestionIndex];
     return (
-      <AnswerRadioGroup
-        question={question.question}
-        options={question.options}
-        onNext={handleNextQuestion}
-      />
+      <div/>
+      // <AnswerRadioGroup
+      //   question={question.question}
+      //   options={question.options}
+      //   onNext={handleNextQuestion}
+      // />
     );
   };
 

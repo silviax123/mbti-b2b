@@ -1,7 +1,8 @@
 import { Button } from "@mui/joy";
 import AnimalWithContainer from "./AnimalWithContainer";
-import AnswerRadioGroup from "./AnswerRadioGroup";
+import QuestionCard from "./QuestionCard";
 import ProgressBar from "./ProgressBar";
+import { Choice } from "../types";
 
 const IndexOfTest = () => {
   return (
@@ -11,12 +12,7 @@ const IndexOfTest = () => {
       </header> 
       <body className='App-body'>
         <ProgressBar value={40}/>
-        <AnimalWithContainer>
-
-        </AnimalWithContainer>
-        <AnswerRadioGroup question={'question1'} options={[]} onNext={function (): void {
-          throw new Error('Function not implemented.');
-        } }></AnswerRadioGroup>
+        {/* <QuestionCard /> */}
         <div className='button-container'>
           <Button disabled={false} variant="solid" color='success'>Submit</Button>
           <Button>Last Question</Button>
