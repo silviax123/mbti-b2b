@@ -25,19 +25,7 @@ const AnswerRadioGroup: React.FC<AnswerRadioGroupProps> = () => {
           control={<Radio size="lg"/>} 
           label=" A. strongly agree" 
         />
-        <FormControlLabel 
-          value="-1" 
-          control={<Radio size="lg"/>} 
-          label=" B. agree" 
-          />
-        <FormControlLabel 
-          value="1" 
-          control={<Radio size="lg"/>} 
-          label=" C. disagree" />
-        <FormControlLabel 
-          value="1" 
-          control={<Radio size="lg"/>} 
-          label=" D. strongly disagree" />
+\
       </RadioGroup>
     </FormControl>
   );

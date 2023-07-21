@@ -12,7 +12,7 @@ const IndexOfTest = () => {
       <body className='App-body'>
         <ProgressBar value={40}/>
         <AnimalWithContainer>
-          <p> this is the content inside the container</p>
+
         </AnimalWithContainer>
         <AnswerRadioGroup question={'question1'} options={[]} onNext={function (): void {
           throw new Error('Function not implemented.');

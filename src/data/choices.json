@@ -1,0 +1,38 @@
+{
+  "plus": [
+    {
+      "text": "strongly disagree",
+      "score": -2
+    },
+    {
+      "text": "disagree",
+      "score": -1
+    },
+    {
+      "text": "agree",
+      "score": 1
+    },
+    {
+      "text": "strongly agree",
+      "score": 2
+    }
+  ],
+  "minus": [
+    {
+      "text": "strongly disagree",
+      "score": 2
+    },
+    {
+      "text": "disagree",
+      "score": 1
+    },
+    {
+      "text": "agree",
+      "score": -1
+    },
+    {
+      "text": "strongly agree",
+      "score": -2
+    }
+  ]
+}
