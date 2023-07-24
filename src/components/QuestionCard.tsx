@@ -5,8 +5,6 @@ import { Choice, Choices, Question } from "../types";
 import { ChoiceButton } from "./ChoiceButton";
 import AnimalWithContainer from "./AnimalWithContainer";
 import ChoicesData from "../data/choices.json"
-import QuestionData from "../data/questions.json";
-
 
 interface Props {
   number?: Number
@@ -30,7 +28,11 @@ const QuestionCard = (props: Props) => {
 
   return (
     <div>
-      <AnimalWithContainer>{props.question.text}</AnimalWithContainer>
+      <AnimalWithContainer>
+        <div className="question-text-container">
+          {props.question.text}
+        </div>
+      </AnimalWithContainer>
       <FormControl>
         <RadioGroup className="answerRadioGroupContainer">
           {choices}

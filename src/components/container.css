@@ -1,9 +1,16 @@
 .container {
+	position: relative;
 	width: 763px;
 	min-height: 300px;
 	margin: 0px 0px 0px -12px;
     background-image: url('../assets/qbox_04.png');
     background-size: cover; 
+}
+
+.question-text-container {
+	position: fixed;
+	top: 170px;
+	left: 100px;
 }
 
 .answerRadioGroupContainer {
