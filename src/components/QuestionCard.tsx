@@ -5,11 +5,13 @@ import { Choice, Choices, Question } from "../types";
 import { ChoiceButton } from "./ChoiceButton";
 import AnimalWithContainer from "./AnimalWithContainer";
 import ChoicesData from "../data/choices.json"
+import QuestionData from "../data/questions.json";
+
 
 interface Props {
+  number?: Number
   question: Question;
   choices: Choice[];
-  score: number;
   totalScore?: number;
   onAnswer: (c: Choice) => void;
 }
@@ -25,6 +27,7 @@ const QuestionCard = (props: Props) => {
     />
   ));
   console.log(choices)
+
   return (
     <div>
       <AnimalWithContainer>{props.question.text}</AnimalWithContainer>

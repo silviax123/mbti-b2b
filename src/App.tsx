@@ -4,6 +4,7 @@ import IndexOfAnswer from './components/IndexOfAnswer';
 import IndexOfTest from './components/IndexOfTest';
 import ShowQuestion from './components/ShowQuestion';
 import { Choice } from './types';
+import Quiz from './components/Quiz';
 
 function App() {
   return (
@@ -11,14 +12,7 @@ function App() {
       {/* <IndexOfTest /> */}
       {/* <IndexOfAnswer /> */}
       {/* <ShowQuestion /> */}
-      <QuestionCard question={{
-        id: '1',
-        text: 'question1',
-        questionType: 'E',
-        questionOrder: 'plus'
-      }} choices={[]} score={0} onAnswer={function (c: Choice): void {
-        throw new Error('Function not implemented.');
-      } }/>
+      <Quiz/>
     </div>
 
   )

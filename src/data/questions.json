@@ -2,12 +2,12 @@
 	"id": "1",
 	"text": "在人多的场合经常感到不自在 ",
 	"questionType": "E",
-"questionOrder":"minus"
+	"questionOrder":"minus"
 }, {
 	"id": "2",
 	"text": "比起充满幻想，你更喜欢脚踏实地 ",
 	"questionType": "S",
-"questionOrder":"plus"
+	"questionOrder":"plus"
 }, {
 	"id": "3",
 	"text": "比起具体的事物，你更喜欢抽象的 ",
