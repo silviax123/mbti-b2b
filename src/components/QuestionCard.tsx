@@ -1,5 +1,4 @@
 import { RadioGroup } from "@radix-ui/react-radio-group";
-import Radio from "@mui/joy/Radio";
 import { FormControl, FormControlLabel } from "@mui/material";
 import "./container.css";
 import { Choice, Choices, Question } from "../types";
@@ -25,6 +24,7 @@ const QuestionCard = (props: Props) => {
       label={choice.text}
     />
   ));
+  console.log(choices)
   return (
     <div>
       <AnimalWithContainer>{props.question.text}</AnimalWithContainer>
