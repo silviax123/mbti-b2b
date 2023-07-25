@@ -1,16 +1,15 @@
 import { RadioGroup } from "@radix-ui/react-radio-group";
 import { FormControl, FormControlLabel } from "@mui/material";
 import "./container.css";
-import { Choice, Choices, Question } from "../types";
+import { Choice, Choices, Question, Domain } from "../types";
 import { ChoiceButton } from "./ChoiceButton";
 import AnimalWithContainer from "./AnimalWithContainer";
 import ChoicesData from "../data/choices.json"
 
 interface Props {
-  number?: Number
   question: Question;
   choices: Choice[];
-  totalScore?: number;
+  // questionType: Domain
   onAnswer: (c: Choice) => void;
 }
 
@@ -24,7 +23,7 @@ const QuestionCard = (props: Props) => {
       label={choice.text}
     />
   ));
-  console.log(choices)
+  // console.log("choices:", choices)
 
   return (
     <div>

@@ -1,6 +1,6 @@
-export const questionType = ['E', 'S', 'T', 'J']
+export const questionTypes = ['E', 'S', 'T', 'J']
 
-export type Domain = typeof questionType[number] // combine them into a union type. ensure 'Domain' can only have one of the four possible values
+export type Domain = typeof questionTypes[number] // combine them into a union type. ensure 'Domain' can only have one of the four possible values
 
 export type Question = {
   id: string;
@@ -19,7 +19,36 @@ export type Choices = {
   minus: Choice[]
 }
 
-export type Answer = {
-  questionType: Domain
+// export type Answer = {
+//   questionType: Domain
+//   score: number
+// }
+export class Answer {
+  constructor(
+    public domain: Domain,
+    public score: number
+  ) {}
+}
+
+export type ScoreResult = {
   score: number
+  text: string
+}
+
+// Bunch of texts from json file
+export type ResultText = {
+  domain: Domain
+  title: string
+  shortDescription: string
+  description: string
+  results: ScoreResult[]
+}
+
+// Result of quiz
+export type ResultTextItem = {
+  domain: Domain
+  title: string
+  shortDescription: string
+  description: string
+  resultText: string
 }
