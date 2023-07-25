@@ -15,13 +15,8 @@ const Quiz: React.FC = (props) => {
     const tempSum = choice.score;
     const tempType = question?.questionType;
     const newSum = {...sum} // by value (decomposition)
-    console.log('sum',sum)
-    console.log('newSum', newSum)
     newSum[tempType] += tempSum
-
     setSum(newSum)
-    console.log("tempSum", tempSum);
-    console.log("tempType", tempType);
   };
 
   return (
@@ -39,7 +34,7 @@ const Quiz: React.FC = (props) => {
                   question={question}
                   choices={ChoicesData[question.questionOrder]}
                   onAnswer={(choice) => {
-                    handleAnswer(choice, question);
+                    handleAnswer(choice, question); // add question here
                     next();
                   }}
                 />
@@ -57,5 +52,4 @@ const Quiz: React.FC = (props) => {
     </div>
   );
 };
-
 export default Quiz;
