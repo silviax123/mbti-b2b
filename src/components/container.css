@@ -8,9 +8,9 @@
 }
 
 .question-text-container {
-	position: fixed;
-	top: 170px;
-	left: 100px;
+	position: absolute;
+	top:175px;
+	left:100px;
 }
 
 .answerRadioGroupContainer {

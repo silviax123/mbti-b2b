@@ -27,11 +27,11 @@ const QuestionCard = (props: Props) => {
 
   return (
     <div>
-      <AnimalWithContainer>
+        <AnimalWithContainer> 
         <div className="question-text-container">
-          {props.question.text}
-        </div>
-      </AnimalWithContainer>
+          {props.question.id}. {props.question.text}
+      </div>
+        </AnimalWithContainer>
       <FormControl>
         <RadioGroup className="answerRadioGroupContainer">
           {choices}
