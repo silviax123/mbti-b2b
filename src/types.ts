@@ -19,16 +19,25 @@ export type Choices = {
   minus: Choice[]
 }
 
-// export type Answer = {
-//   questionType: Domain
-//   score: number
-// }
-export class Answer {
-  constructor(
-    public domain: Domain,
-    public score: number
-  ) {}
+export type Result = {
+  description: string
+  character: string
+  career: string
+  advantages: string
+  disadvantages: string
 }
+
+export type Answer = {
+  questionType: Domain
+  score: number
+}
+
+// export class Answer {
+//   constructor(
+//     public domain: Domain,
+//     public score: number
+//   ) {}
+// }
 
 export type ScoreResult = {
   score: number

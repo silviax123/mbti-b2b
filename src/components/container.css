@@ -1,16 +1,48 @@
-.container {
+.container-with-animal {
 	position: relative;
 	width: 763px;
 	min-height: 300px;
 	margin: 0px 0px 0px -12px;
-    background-image: url('../assets/qbox_04.png');
-    background-size: cover; 
+  background-image: url('../assets/qbox_04.png');
+  background-size: cover; 
 }
 
 .question-text-container {
 	position: absolute;
 	top:175px;
 	left:100px;
+}
+
+.container-with-title-mid {
+	position: relative;
+	background-image: url('../assets/res4.png');
+	background-size: cover; 
+
+}
+
+.title-img-container {
+	font-size: 28px;
+}
+
+.label {
+	margin: 30px 30px;
+	clear: both;
+	text-align: left;
+	font-size: 28px;
+}
+
+.label li {
+	line-height: 24px;
+	height: 24px;
+	display: inline-block;
+	background: #EB6841;
+	padding: 20px 30px;
+	margin: 20px 10px 0 0;
+	border-radius: 40px;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
 }
 
 .answerRadioGroupContainer {

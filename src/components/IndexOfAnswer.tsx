@@ -1,10 +1,12 @@
 import './container.css';
 import ResultData from "../data/results.json";
-import { useEffect, useState } from 'react';
+import { Children, useEffect, useState } from 'react';
 import photoINTP from '../assets/profile-photo/profile-INTP.png'
 import dialog_box from '../assets/res1.png'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import ShowTags from './ShowTags';
+import ContainerWithTitle from './ContainerWithTitle';
+import { match } from 'assert';
 
 
 const IndexOfAnswer = () => {
@@ -21,16 +23,22 @@ const IndexOfAnswer = () => {
   }
   console.log(result)
 
+  // const [matchedpersonality, setMatchedpersonality] = useState(false);
+
   const matchedpersonality = ResultData.find(item => item.id === result)
+  const descriptionData = matchedpersonality?.description
 
   return (
-    <div className="answer-container">
+    <div className="answer-container"
+      // onLoad={()=> }
+    >
       <div>
         <h1>你的mbti属性是:</h1>
-        <div><i>{result}</i></div>
-        <div>{matchedpersonality?.name}</div>
+        <h1>{result}</h1>
+        <h1>{matchedpersonality?.name}</h1>
       </div>
-      <div>
+
+      <div> 
         <img src={photoINTP} alt='INTP' className='profile-photo' />
       </div>
       
@@ -45,11 +53,15 @@ const IndexOfAnswer = () => {
         <CartesianGrid stroke='#f5f5f5' />
         <Bar dataKey="value" fill="#8884d8" />
       </BarChart> */}
-      <div>
+      <div className='label'>
         {matchedpersonality?.tags.map((tag, index) => (
           <li key={index}>{tag}</li>
         ))}
       </div>
+      <ContainerWithTitle> 
+        {matchedpersonality?.description}
+      </ContainerWithTitle>
+      {/* <div>2222222人格特征：{matchedpersonality?.character}</div> */}
 
     </div>
   )

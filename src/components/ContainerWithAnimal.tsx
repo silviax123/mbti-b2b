@@ -7,7 +7,7 @@ interface AnimalWithContainerProps {
 
 const AnimalWithContainer: React.FC<AnimalWithContainerProps> = ({ children }) => {
   return (
-    <div className="container">
+    <div className="container-with-animal">
       {children}
     </div>
   );

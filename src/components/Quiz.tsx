@@ -1,17 +1,16 @@
-import React, { useState } from "react";
-import { Choice, Domain, Question } from "../types";
 import './container.css';
-import QuestionCard from "./QuestionCard";
-import { Step, Steps, Wizard } from "react-albus";
-import {  useNavigate } from 'react-router-dom';
 import ChoicesData from "../data/choices.json";
 import QuestionData from "../data/questions.json";
+import { Choice, Domain, Question } from "../types";
+import React, { useState } from "react";
+import { Step, Steps, Wizard } from "react-albus";
+import {  useNavigate } from 'react-router-dom';
 import { Button } from "@mui/joy";
 import { Line } from 'rc-progress';
 import { TransitionGroup } from "react-transition-group";
+import QuestionCard from "./QuestionCard";
 
-
-const Quiz: React.FC = (props) => {
+const Quiz: React.FC = () => {
   const questionsData = QuestionData as Question[];
   const [sum, setSum] = useState<{ [key in Domain]: number }>({
     'E': 0, 'S': 0, 'T': 0, 'J':0
@@ -64,7 +63,11 @@ const Quiz: React.FC = (props) => {
                               onClick={handleSubmit}
                             >Submit
                             </Button>
-                            <Button onClick={previous}>Last Question</Button>
+                            
+                            <Button 
+                              onClick={previous}
+                            >Last Question
+                            </Button>
                           </div>
                         </div>
                       )}

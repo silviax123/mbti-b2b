@@ -1,9 +1,9 @@
 import { RadioGroup } from "@radix-ui/react-radio-group";
 import { FormControl, FormControlLabel } from "@mui/material";
 import "./container.css";
-import { Choice, Choices, Question, Domain } from "../types";
+import { Choice, Choices, Question } from "../types";
 import { ChoiceButton } from "./ChoiceButton";
-import AnimalWithContainer from "./AnimalWithContainer";
+import AnimalWithContainer from "./ContainerWithAnimal";
 import ChoicesData from "../data/choices.json"
 
 interface Props {
@@ -30,7 +30,7 @@ const QuestionCard = (props: Props) => {
         <AnimalWithContainer> 
         <div className="question-text-container">
           {props.question.id}. {props.question.text}
-      </div>
+        </div>
         </AnimalWithContainer>
       <FormControl>
         <RadioGroup className="answerRadioGroupContainer">
