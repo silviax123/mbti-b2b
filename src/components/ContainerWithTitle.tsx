@@ -12,13 +12,12 @@ interface ContainerWithTitleProps {
 
 const ContainerWithTitle: React.FC<ContainerWithTitleProps> = ({children}) => {
   return (
-    <div className="content-container">
-      <h1>zhege</h1>
-      <img src={ImgTitleUp} alt='img-title-up' className='container-with-title-up'/>
-      <div className='container-with-title-mid'>
-        {children}
+    <div className="whole-content-container">
+      <img src={ImgTitleUp} alt='img-title-up' className='title-img-up'/>
+      <div className='info-text'>
+        <p>{children}</p>
       </div>
-      <img src={ImgTitleDown} alt='img-title-down'className='container-with-title-down'/>
+      <img src={ImgTitleDown} alt='img-title-down' className='title-img-down'/>
       
 
     </div>

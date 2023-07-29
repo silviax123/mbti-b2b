@@ -1,3 +1,4 @@
+/* QUIZ PART */
 .container-with-animal {
 	position: relative;
 	width: 763px;
@@ -13,14 +14,40 @@
 	left:100px;
 }
 
-.container-with-title-mid {
-	position: relative;
-	background-image: url('../assets/res4.png');
-	background-size: cover; 
-
+.answerRadioGroupContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 567px;
 }
 
-.title-img-container {
+.answer-container {
+	background-color: #FFCD5C;
+	height: 8000px;
+	font-weight: 400;
+}
+
+
+/* RESULT PART */
+
+.profile-photo {
+	text-align: center;
+	margin-top: 20px;
+	height: 250px;
+}
+
+.oneWord {
+	text-align: center;
+	position: relative;
+	width: 90%;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.oneWordtxt {
+	position: absolute;
+	top: 0;
+	margin-top: 60px;
+	margin-left: 100px;
 	font-size: 28px;
 }
 
@@ -45,42 +72,51 @@
 	transition: all 0.5s;
 }
 
-.answerRadioGroupContainer {
-	display: flex;
-	justify-content: space-between;
-	width: 567px;
+.whole-content-container {
+	margin-bottom: 80px;
+	margin-top: 20px;
 }
 
-.answer-container {
-	background-color: #FFCD5C;
-	height: 8000px;
-	font-weight: 400;
+.whole-content-container div {
+	background-image: url(../assets/res4.png);
+	width: 763px;
+	padding: 10px 0px 0px 0px;
+	margin: 0px 0px 0px -12px;
 }
+
+.title-img-up{
+	/* width: 800px; */
+	position: relative;
+}
+
+.title-img-down {
+	/* width: 800px; */
+	position: relative;
+	margin-top: -18px;
+}
+
+.title-text {
+	position: absolute;
+	top: auto;
+	left: 350px;
+	/* padding: 20px 0px 30px 110px; */
+	font-size: 32px;
+}
+
+/* .info-text {
+	background-image: url(../assets/res4.png);
+	width: 763px;
+	padding: 10px 0px 0px 0px;
+	margin: 0px 0px 0px -12px;
+} */
+
+
+
+
+
 
 .header-container {
 	padding: 32px;
-}
-
-.profile-photo {
-	text-align: center;
-	margin-top: 20px;
-	height: 250px;
-}
-
-.oneWord {
-	text-align: center;
-	position: relative;
-	width: 90%;
-	margin-left: 50px;
-	margin-top: 20px;
-}
-
-.oneWordtxt {
-	position: absolute;
-	top: 0;
-	margin-top: 60px;
-	margin-left: 100px;
-	font-size: 28px;
 }
 
 .g-container-a {

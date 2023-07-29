@@ -58,10 +58,37 @@ const IndexOfAnswer = () => {
           <li key={index}>{tag}</li>
         ))}
       </div>
+
       <ContainerWithTitle> 
+        <h1 className='title-text'>人格描述</h1>
         {matchedpersonality?.description}
       </ContainerWithTitle>
-      {/* <div>2222222人格特征：{matchedpersonality?.character}</div> */}
+      <ContainerWithTitle> 
+        <h1 className='title-text'>人格特征</h1>
+        {matchedpersonality?.character}
+      </ContainerWithTitle>
+      <ContainerWithTitle> 
+        <h1 className='title-text'>职业发展</h1>
+        {matchedpersonality?.career}
+      </ContainerWithTitle>
+      <ContainerWithTitle> 
+        <h1 className='title-text'>人格优势</h1>
+        {matchedpersonality?.advantages}
+      </ContainerWithTitle>
+      <ContainerWithTitle> 
+        <h1 className='title-text'>人格劣势</h1>
+        {matchedpersonality?.disadvantages}
+      </ContainerWithTitle>
+      <ContainerWithTitle> 
+        <h1 className='title-text'>代表人物</h1>
+        {matchedpersonality?.famous}
+      </ContainerWithTitle>
+      <ContainerWithTitle> 
+        <h1 className='title-text'>CP组合</h1>
+        {matchedpersonality?.couple}
+      </ContainerWithTitle>
+
+
 
     </div>
   )
