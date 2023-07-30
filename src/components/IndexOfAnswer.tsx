@@ -87,9 +87,6 @@ const IndexOfAnswer = () => {
         <h1 className='title-text'>CP组合</h1>
         {matchedpersonality?.couple}
       </ContainerWithTitle>
-
-
-
     </div>
   )
 }

@@ -25,6 +25,14 @@ const Quiz: React.FC = () => {
     setSum(newSum)
   };
 
+  const handleLastQuestion = (choice: Choice, question: Question) => {
+    const tempSum = choice.score;
+    const tempType = question?.questionType;
+    const newSum = {...sum}
+    newSum[tempType] -= tempSum
+    setSum(newSum)
+  }
+
   const handleSubmit = () => {
     localStorage.setItem('sumData', JSON.stringify(sum));
     navigate('/result')
@@ -55,6 +63,13 @@ const Quiz: React.FC = () => {
                               next();
                             }}
                           />
+                          <Button 
+                            onClick={previous}
+                            // onClick = {(choice) => {
+                            //   handleLastQuestion(choice, question)
+                            // }}
+                          >Last Question
+                          </Button>
                           <div className='button-container'>
                             <Button 
                               disabled={question.id !== "60"} 
@@ -62,11 +77,6 @@ const Quiz: React.FC = () => {
                               color='success'
                               onClick={handleSubmit}
                             >Submit
-                            </Button>
-                            
-                            <Button 
-                              onClick={previous}
-                            >Last Question
                             </Button>
                           </div>
                         </div>

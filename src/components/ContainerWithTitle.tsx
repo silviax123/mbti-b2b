@@ -2,7 +2,6 @@ import React from 'react';
 import { Result } from '../types';
 import './container.css';
 import ImgTitleUp from '../assets/res3.png'
-import ImgTitleMid from '../assets/res4.png'
 import ImgTitleDown from '../assets/res5.png'
 
 interface ContainerWithTitleProps {
@@ -18,8 +17,6 @@ const ContainerWithTitle: React.FC<ContainerWithTitleProps> = ({children}) => {
         <p>{children}</p>
       </div>
       <img src={ImgTitleDown} alt='img-title-down' className='title-img-down'/>
-      
-
     </div>
   );
 };
