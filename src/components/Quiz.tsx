@@ -58,16 +58,16 @@ const Quiz: React.FC = () => {
                           <QuestionCard
                             question={question}
                             choices={ChoicesData[question.questionOrder]}
-                            onAnswer={(choice) => {
+                            onAnswer={(choice) => { // what the choice points to? why this ok but last question not?
                               handleAnswer(choice, question); // add question here
                               next();
                             }}
                           />
                           <Button 
-                            onClick={previous}
-                            // onClick = {(choice) => {
-                            //   handleLastQuestion(choice, question)
-                            // }}
+                            onSelect = {(choice) => {
+                              handleLastQuestion(choice, question);
+                              previous();
+                            }}
                           >Last Question
                           </Button>
                           <div className='button-container'>
