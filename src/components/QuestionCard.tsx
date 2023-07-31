@@ -5,6 +5,7 @@ import { Choice, Choices, Question } from "../types";
 import { ChoiceButton } from "./ChoiceButton";
 import AnimalWithContainer from "./ContainerWithAnimal";
 import ChoicesData from "../data/choices.json"
+import { useState } from "react";
 
 interface Props {
   question: Question;
@@ -15,15 +16,24 @@ interface Props {
 
 const QuestionCard = (props: Props) => {
   const choicesData = ChoicesData as Choices;
+
+  const [selectedChoice, setSelectedChoice] = useState<Boolean>(false);
+
+  const handleChoiceClick = (choice: Choice) => {
+    setSelectedChoice(true);
+    props.onAnswer(choice);
+  }
+
   const choices = choicesData[props.question.questionOrder].map((choice) => (
-    <FormControlLabel
+    <FormControlLabel 
       value={choice.score}
       key={choice.score+1}
-      control={<ChoiceButton choice={choice} onClick={props.onAnswer} />}
+      control={<ChoiceButton choice={choice} onClick={handleChoiceClick} />
+      }
       label={choice.text}
     />
   ));
-  // console.log("choices:", choices)
+  console.log("choices:", choices)
 
   return (
     <div>

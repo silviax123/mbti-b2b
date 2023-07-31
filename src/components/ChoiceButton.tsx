@@ -1,17 +1,15 @@
 import { Choice } from '../types';
 import Radio from '@mui/joy/Radio';
-
-
 interface Props {
   choice: Choice;
   onClick: (choice: Choice) => void;
 }
 
-export function ChoiceButton(props: Props) {
+export function ChoiceButton({ choice, onClick }: Props) {
   return (
     <Radio 
-      onClick={(e) => {props.onClick(props.choice)}}>
-      {props.choice.text}
+      onClick={() => {onClick(choice)}}>
+      {choice.text}
     </Radio>
   );
 }
