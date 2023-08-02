@@ -10,30 +10,58 @@ import { Line } from 'rc-progress';
 import { TransitionGroup } from "react-transition-group";
 import QuestionCard from "./QuestionCard";
 
+type Sum = { E: number, S: number, T: number, J: number}
+
 const Quiz: React.FC = () => {
   const questionsData = QuestionData as Question[];
-  const [sum, setSum] = useState<{ [key in Domain]: number }>({
-    'E': 0, 'S': 0, 'T': 0, 'J':0
-  });
+  const [answers, setAnswers] = useState<{choice: Choice, question: Question}[]>([]);
+  // const [sum, setSum] = useState<Sum>({
+  //   E: 0, S: 0, T: 0, J:0
+  // });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  console.log(answers);
   const handleAnswer = (choice: Choice, question: Question) => {
-    const tempSum = choice.score;
-    const tempType = question?.questionType;
-    const newSum = {...sum} // by value (decomposition)
-    newSum[tempType] += tempSum
-    setSum(newSum)
+    answers.push({choice, question});
+    setAnswers(answers);
+    console.log(getSum());
+    
+    // const tempSum = choice.score;
+    // const tempType = question?.questionType;
+    // const newSum = {...sum} // by value (decomposition)
+    // newSum[tempType] += tempSum
+    // setSum(newSum)
   };
 
-  const handleLastQuestion = (choice: Choice, question: Question) => {
-    const tempSum = choice.score;
-    const tempType = question?.questionType;
-    const newSum = {...sum}
-    newSum[tempType] -= tempSum
-    setSum(newSum)
+
+
+  const handleLastQuestion = () => {
+    // const tempSum = choice.score;
+    // const tempType = question?.questionType;
+    // const newSum = {...sum}
+    // newSum[tempType] -= tempSum
+    // setSum(newSum)
+    answers.pop()
+    setAnswers(answers);
+    console.log(getSum());
   }
 
-  const handleSubmit = () => {
+  const getSum = () => {
+    const temp = [1, 2, 3, 4]
+    const total = temp.reduce((sum, value) => sum += value, 0);
+    console.log(total)
+
+    return answers.reduce((sum, answer) => {
+      const questionType = answer.question.questionType; 
+      const score = answer.choice.score;
+      sum[questionType as keyof Sum] += score;
+      return sum
+    }, {E: 0, S: 0, T: 0, J: 0} as Sum);
+  }
+
+  const handleSubmit = (next: any) => {
+    answers.filter((answer) => answer.choice);
+    const sum = getSum();
     localStorage.setItem('sumData', JSON.stringify(sum));
     navigate('/result')
   }
@@ -58,14 +86,17 @@ const Quiz: React.FC = () => {
                           <QuestionCard
                             question={question}
                             choices={ChoicesData[question.questionOrder]}
-                            onAnswer={(choice) => { // what the choice points to? why this ok but last question not?
-                              handleAnswer(choice, question); // add question here
+                            onAnswer={(choice) => {
+                               // what the choice points to? why this ok but last question not?
+                              handleAnswer(choice, question);
+                              // add question here
                               next();
                             }}
                           />
                           <Button 
-                            onSelect = {(choice) => {
-                              handleLastQuestion(choice, question);
+                            // onClick={previous}
+                            onClick = {() => {
+                              handleLastQuestion();
                               previous();
                             }}
                           >Last Question
@@ -90,10 +121,10 @@ const Quiz: React.FC = () => {
         />
       </div>
       <div>
-        <p>Sum E: {sum.E}</p>
+        {/* <p>Sum E: {sum.E}</p>
         <p>Sum S: {sum.S}</p>
         <p>Sum T: {sum.T}</p>
-        <p>Sum J: {sum.J}</p>
+        <p>Sum J: {sum.J}</p> */}
       </div>
 
     </div>

@@ -1,6 +1,6 @@
-export const questionTypes = ['E', 'S', 'T', 'J']
+// export const questionTypes = ['E', 'S', 'T', 'J']
 
-export type Domain = typeof questionTypes[number] // combine them into a union type. ensure 'Domain' can only have one of the four possible values
+export type Domain = 'E' | 'S' | 'T' | 'J' // combine them into a union type. ensure 'Domain' can only have one of the four possible values
 
 export type Question = {
   id: string;
